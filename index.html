@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pace JS | Preloader</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+<body>
+       <div class="mode" id="preloader">
+         <h2>ROTARACT CLUB </h2>
+         <h3>OF </h3>
+         <h4> PARUL UNIVERISTY</h4>
+       <img src='Wheel.png' class="p">
+</div>
+<body>
+      
+           
+           <nav class="nav">
+              <ul>
+                 <li><a href="about.html" class="active">ABOUT US</a></li>
+                 <li><a href="#">EVENTS</a></li>
+                 <li><a href="#">CONTACT US</a></li>
+              </ul>
+           </nav>
+          
+
+          <div class="glass">
+            <section class="landing">
+                <h1>ROTARACT CLUB</h1>
+                <h5>OF </h5>
+                <h6> PARUL UNIVERISTY</h6>
+                <img src= 'Wheel.png' class="main">
+            </section>
+        
+    </div>
+        
+    
+    <script type="text/javascript">
+
+        paceOptions = {
+        ajax: true,
+        document: true,
+        eventLag: false
+        };
+
+        Pace.on('done', function() {
+        $('.p').delay(500).animate({top: '30%', opacity: '1'}, 600, $.bez([0.19,1,0.22,1]));
+
+
+        $('#preloader').delay(2500).animate({top: '-100%'}, 1500, $.bez([0.19,1,0.22,1]));
+
+        TweenMax.from(".title", 2, {
+             delay: .6,
+                  y: 10,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            })
+       });
+
+      </script>
+      
+  </body>
+</html>
+        <script>
+
+        paceOptions = {
+        ajax: true,
+        document: true,
+        eventLag: false
+        };
+
+        Pace.on('done', function() {
+        $('.p').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+
+        $('#preloader').delay(1500).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+        TweenMax.from(".title", 2, {
+             delay: 1.8,
+                  y: 10,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            })
+       });
+
+      </script>
+
+</body>
+</html>

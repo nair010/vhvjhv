@@ -1,0 +1,355 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.main{
+	background-image: url('images/bw.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+.dul{
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 12;
+    border-radius: 25px;
+    position: absolute;
+    top: 0%;
+
+}
+.main .gallery{
+
+	height: 100vh;
+	width: 100%;
+	margin: auto;
+	
+	display: grid;
+	grid-template-columns: auto auto auto auto; /*i write auto four time because we want four rows*/
+	
+	grid-auto-flow: dense;
+}
+.main .gallery .img{
+	
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9 );
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.head{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 35%;
+  top: -8%;
+}
+.pup{
+  position: absolute;
+    width: 490px;
+    height: 410px;
+    
+}
+
+.main .gallery .img img{
+	height: 150%;
+	width: 100%;
+	object-fit: cover;
+	filter: brightness(0.5) grayscale(100);
+	border-radius: 2px;
+	transition: 0.3s ease-in-out;
+    display: none;
+}
+.main .gallery .img:hover img{
+	filter: brightness(1) grayscale(0);
+}
+
+@media only screen and (max-width: 768px){
+	.main h1{
+		font-size: 1.8em;
+		width: 400px;
+	}
+	.main p{
+		font-size: 1.2em;
+	}
+	.main .gallery{
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+}
+@media only screen and (max-width: 392px){
+	.main h1{
+		font-size: 1.2em;
+		width: 300px;
+	}
+	.main p{
+		font-size: 0.89em;
+	}
+	.main .gallery{
+		display: block;
+	}
+	.main .gallery .img{
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin:2% 0;
+	}
+	.main .gallery .img img{
+		display: block;
+		filter: brightness(1) grayscale(0);
+	}
+}
+#svgs{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: color 0.5s ease forwards 0.3s;
+  }
+  #svgs path:nth-child(1){
+    stroke-dasharray: 100px;
+    
+  }
+  #svgs path:nth-child(2){
+    stroke-dasharray: 159.5px;
+    stroke-dashoffset: 159.5px;
+    animation: lines 2s ease-in forwards, fill 5s linear forwards ;
+  }
+  #svgs path:nth-child(3){
+    stroke-dasharray: 148.45px;
+    stroke-dashoffset: 148.45px;
+    animation: lines 2s ease forwards 0.3s,fill 5s linear forwards ;
+  }
+  #svgs path:nth-child(4){
+    stroke-dasharray: 134.5px;
+    stroke-dashoffset: 134.5px;
+    animation: lines 2s ease forwards 0.6s,fill 5s linear forwards 0.9s;
+  }
+  #svgs path:nth-child(5){
+    stroke-dasharray: 221.5px;
+    stroke-dashoffset: 221.5px;
+    animation: lines 2s ease forwards 0.9s,fill 5s linear forwards 1.2s;
+  }
+  #svgs path:nth-child(6){
+      stroke-dasharray: 163.45px;
+      stroke-dashoffset: 163.45px;
+      animation: lines 2s ease forwards 1.2s,fill 5s linear forwards 1.5s;
+  }
+  #svgs path:nth-child(7){
+    stroke-dasharray: 185.5px;
+    stroke-dashoffset: 185.5px;
+    animation: lines 2s ease forwards 1.5s,fill 5s linear forwards 1.8s;
+ }
+  #svgs path:nth-child(8){
+    stroke-dasharray: 134.45px;
+     stroke-dashoffset: 134.45px; 
+     animation: lines 2s ease forwards 1.8s,fill 5s linear forwards 2.1s;
+  }
+  #svgs path:nth-child(9){
+    stroke-dasharray: 163.45px;
+    stroke-dashoffset: 163.45px;
+    animation: lines 2s ease forwards 2.1s,fill 5s linear forwards 2.4s;
+  }
+  #svgs path:nth-child(10){
+    stroke-dasharray: 159.5px;
+    stroke-dashoffset: 159.5px;
+    animation: lines 2s ease forwards 2.4s,fill 5s linear forwards 2.7s;
+  }
+  #svgs path:nth-child(11){
+    stroke-dasharray: 185.5px;
+    stroke-dashoffset: 185.5px;
+    animation: lines 2s ease forwards 2.7s,fill 5s linear forwards 3s;
+  }
+  #svgs path:nth-child(12){
+    stroke-dasharray: 159.5px;
+    stroke-dashoffset: 159.5px;
+    animation: lines 2s ease forwards 3s,fill 5s linear forwards 3.3s;
+  }
+  #svgs path:nth-child(13){
+    stroke-dasharray: 214.5px;
+    stroke-dashoffset: 214.5px;
+    animation: lines 2s ease forwards 3.3s,fill 5s linear forwards 3.6s;
+  }
+  #svgs path:nth-child(14){
+    stroke-dasharray: 163.45px;
+      stroke-dashoffset: 163.45px;
+      animation: lines 2s ease forwards 3.6s,fill 5s linear forwards 3.9s;
+  }
+  #svgs path:nth-child(15){
+    stroke-dasharray: 214.5px;
+    stroke-dashoffset: 214.5px;
+    animation: lines 2s ease forwards 3.9s,fill 5s linear forwards 4.2s;
+  }
+  #svgs path:nth-child(16){
+    stroke-dasharray: 147.5px;
+    stroke-dashoffset: 147.5px;
+    animation: lines 2s ease forwards 4.2s,fill 5s linear forwards 4.5s;
+  }
+  #svgs path:nth-child(17){
+    stroke-dasharray: 221.5px;
+    stroke-dashoffset: 221.5px;
+    animation: lines 2s ease forwards 4.5s,fill 5s linear forwards 4.8s;
+  }
+  #svgs path:nth-child(18){
+    stroke-dasharray: 148.45px;
+    stroke-dashoffset: 148.45px;
+    animation: lines 2s ease forwards 4.8s,fill 5s linear forwards 5.1s;
+  }
+  @keyframes lines {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill {
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: #fff;
+    }
+}
+nav {
+    position: fixed;
+    z-index: 100;
+    height: 8vh;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  nav ul li{
+        color: #fff;
+      text-decoration: none;
+  }
+  nav ul li a{
+      color: #fff;
+      text-decoration: none;
+  }
+  nav ul li a:hover{
+      background-color: rgb(0, 54, 54);
+  }
+  nav ul ul{
+      position: absolute;
+      text-decoration: none;
+      color: #fff;
+      display: none;
+  }
+  nav ul li:hover > ul{
+        display: block;
+  }
+  .logo {
+    color: rgb(230, 9, 112);
+    font-weight: 600;
+    font-size: 30px;
+  }
+  
+  nav .nav-links ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav .nav-links ul li {
+    padding: 0 4px;
+    list-style: none;
+  }
+  
+  nav .nav-links ul li img {
+    transform: scale(0.45);
+  }
+  .set{
+    color: rgb(0, 0, 0);
+    top: -100%;
+    background-color: #000;
+    overflow-x: hidden;
+}
+.ice{
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.03);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 12;
+    border-radius: 10px;
+    top: -100%;
+    
+}
+#wrap {
+    width: 980px;
+    left: -490px;
+    top: 6%;
+    margin-top: 52px;
+    margin-left: 50%;
+    position: relative;
+}
+
+#showcase {
+    width: 100%;
+    height: 460px;
+}
+
+#showcase img {
+    width: 300px;
+    height: 310px;
+    border-radius: 40px;
+    cursor: pointer;
+    clip-path: circle();
+    
+    
+}
+
+#item-title {
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.nav {
+    text-align: center;
+}
+
+.nav > button {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    background: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.nav > button:focus {
+    border: none;
+    outline: none;
+}
+
+
+   
+
+@media screen and (max-width: 768px) {
+   
+}
+@media(max-width:720px){
+    
+	
+	
+
+}
