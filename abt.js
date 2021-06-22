@@ -2,11 +2,14 @@ var scene = document.getElementById("scene");
 var parallaxInstance = new Parallax(scene);
 
 var keys = [
-  "ABOUT ROTARCT CLUB",
-  "ABOUT RCPU",
-  "OUR MISSION",
-  "OUR VISION",
-  
+  "Mercury",
+  "Venus",
+  "Earth",
+  "Mars",
+  "Jupiter",
+  "Saturn",
+  "Uranus",
+  "Neptune"
 ];
 var slider = new Swiper(".swiper-container", {
   // Optional parameters
@@ -128,3 +131,5 @@ gsap.to(".swiper-slide-active", 0, {
   scale: 1
 });
 
+
+  
